@@ -1,0 +1,25 @@
+
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Pedido</th>
+        <th scope="col">ID do Cliente</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Transação</th>
+        <th scope="col">Autorização</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of pedidos">
+        <th scope="row">{{p.id}}</th>
+        <td>{{p.cliente}}</td>
+        <td>{{p.nome}}</td>
+        <td>{{p.email}}</td>
+        <td>{{p.transacao}}</td>
+        <td>{{p.pagamento}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

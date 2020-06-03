@@ -1,16 +1,21 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { PedidosListagemComponent } from './pedidos-listagem/pedidos-listagem.component';
+import { PedidoService } from './pedido.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PedidosListagemComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ PedidoService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
